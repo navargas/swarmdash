@@ -1,0 +1,27 @@
+.clientid {
+  padding-top: 3em;
+  width: 50%;
+}
+.clientid input {
+  width: 70%;
+}
+
+.clientid button {
+  border: solid 2px #333;
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+}
+
+/* Input box style */
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #333;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+}
