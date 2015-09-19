@@ -1,3 +1,17 @@
+var exapmle = {
+  "bluemix": {
+    "vblock01":["container01", "ubuntu", "nginx"],
+    "vm2":["another", "nginx"] },
+  "amazon": {
+    "ec2-01":["centos"] },
+  "softlayer": {
+    "vm1":[],
+    "vm2":["nginx", "apache", "db2"] },
+   "digital ocean": {
+     "vm1":[],
+     "vm2":["nginx"]}
+};
+
 $(function () {
   var clientIdInput  = $('#clientIdInput');
   var clientIdButton = $('#clientIdButton');
@@ -10,4 +24,31 @@ $(function () {
     clientIdButton.css('border-color', 'rgba(255,255,255,0)');
     clientIdButton.blur();
   });
+
+  $('.clientid').hide();
+  $('#dashbox').css('display', 'block');
+
+  function loadJSON(object) {
+    for (var provider in object) {
+      if (!object.hasOwnProperty(provider)) continue;
+      var title = $('<h3>')
+        .text(provider);
+      var item = $('<span>')
+        .addClass('col-md-12')
+        .addClass('parentContainer')
+        .append(title);
+      var box = $('<span>')
+        .addClass('col-md-4')
+        .append(item);
+      var innerItems = object[provider];
+      for (var machine in innerItems) {
+        var innerChild = $('<span>')
+          .addClass('col-md-12')
+          .addClass('innerContainer');
+        innerChild.text(machine);
+        item.append(innerChild);
+      }
+      $('#dashbox').append(box);
+    }
+  }; loadJSON(exapmle);
 });

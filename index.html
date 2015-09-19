@@ -11,12 +11,15 @@
       <div class="page-header">
         <h1>Docker Swarm Dashboard</h1>
         <p class="lead">Enter the unique ID from your SwarmDash client</p>
+        <!-- Client ID input Form -->
+        <div class="clientid">
+          <input placeholder="client id" type="text" id="clientIdInput"></input>
+          <span id=buttonspinner>
+            <button id="clientIdButton">Go</button>
+          </span>
+        </div>
       </div>
-      <div class="clientid">
-        <input placeholder="client id" type="text" id="clientIdInput"></input>
-        <span id=buttonspinner>
-          <button id="clientIdButton">Go</button>
-        </span>
+      <div id="dashbox" style="display:none;">
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
