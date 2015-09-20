@@ -3,6 +3,7 @@ var exapmle = {
     "vblock01":["container01", "ubuntu", "nginx"],
     "vm2":["another", "nginx"] },
   "amazon": {
+    "vblock01":["container01", "ubuntu", "nginx"],
     "ec2-01":["centos"] },
   "softlayer": {
     "vm1":[],
@@ -33,16 +34,16 @@ $(function () {
       if (!object.hasOwnProperty(provider)) continue;
       var title = $('<h3>')
         .text(provider);
-      var item = $('<span>')
+      var item = $('<div>')
         .addClass('col-md-12')
         .addClass('parentContainer')
         .append(title);
       var box = $('<span>')
-        .addClass('col-md-4')
+        .addClass('col-md-4 col-sm-6')
         .append(item);
       var innerItems = object[provider];
       for (var machine in innerItems) {
-        var innerChild = $('<span>')
+        var innerChild = $('<div>')
           .addClass('col-md-12')
           .addClass('innerContainer');
         innerChild.text(machine);

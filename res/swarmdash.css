@@ -20,14 +20,14 @@
 }
 
 .parentContainer {
-  border: solid 2px #333;
+  outline: solid 2px #333;
   margin-bottom:2em;
   padding-bottom:2em;
 }
 
 .innerContainer {
-  border: solid 2px #333;
-  margin-bottom:-2px;
+  outline: solid 2px #333;
+  margin-bottom:2px;
 }
 
 /* Input box style */
