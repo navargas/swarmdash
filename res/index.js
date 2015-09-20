@@ -29,6 +29,15 @@ $(function () {
   $('.clientid').hide();
   $('#dashbox').css('display', 'block');
 
+  function newColor(seed) {
+    selection = ['A', 'F', 'B', 'E', 'C', 'D'];
+    Math.seedrandom(seed);
+    var R = selection[Math.floor(Math.random() * selection.length)];
+    var G = selection[Math.floor(Math.random() * selection.length)];
+    var B = selection[Math.floor(Math.random() * selection.length)];
+    return '#' + R + G + B;
+  };
+
   function loadJSON(object) {
     for (var provider in object) {
       if (!object.hasOwnProperty(provider)) continue;
@@ -36,6 +45,7 @@ $(function () {
         .text(provider);
       var item = $('<div>')
         .addClass('col-md-12')
+        .css('background-color', newColor(provider))
         .addClass('parentContainer')
         .append(title);
       var box = $('<span>')
