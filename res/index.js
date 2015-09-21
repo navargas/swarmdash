@@ -47,6 +47,7 @@ $(function () {
     }, 1000);
     subscribe(clientIdInput.val(), iotClient);
     location.hash = clientIdInput.val();
+    $('#subtitle').text(clientIdInput.val());
   });
 
 
