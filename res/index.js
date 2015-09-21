@@ -27,7 +27,7 @@ $(function () {
   var appClientConfig = {
     org: 'quickstart',
     type: 'quickstart',
-    id: 'virtualdevice-104248025367916554634-default'
+    id: 'swarmdash-' + Math.random().toString(26).slice(2)
   };
   var iotClient = new IBMIoTF.ApplicationClient(appClientConfig);
   
