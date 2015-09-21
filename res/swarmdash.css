@@ -2,6 +2,11 @@
   border-bottom-color: rgba(225,225,225,0);
 }
 
+a.no-deco {
+  text-decoration:none;
+  color: #333 !important;
+}
+
 .clientid {
   padding-top: 3em;
   padding-bottom: 5em;
